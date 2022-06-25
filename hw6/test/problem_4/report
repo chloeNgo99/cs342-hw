@@ -1,0 +1,44 @@
+TODO: add your report here
+/***
+- How B-Tree works?
+    B-tree is an advance self-balance tree data structure which can store more
+    than 1 value in a single note and more than 2 children per note.
+    In a B-tree structure, every node can have at most M children and can store
+    at most M-1 keys or values. When the children reach M/2 of its amount,
+    the tree will slit according to the following structure:
+    All the values inside the left most root are smaller than the root and the
+    values inside the right most root are greater than the root. Meanwhile,
+    the values which exist between any 2 keys are should only contain the key
+    values which is greater than their preceding key and smaller than their
+    following key. All values which are store in the same node should be sorted
+    in ascending order.
+- How does B-Tree compares to a binary search tree?
+    As mentioned above, B-tree is a self balance data structure and every node
+    allow to have more than 1 value in a single node and more than 2 children
+    for every node, stores value sorted in inorder traversal, and more efficient
+    for dealing with larger data.
+- Why could B-Tree be helpful for data indexing?
+    B-tree is storage-friendly meaning it work well on any layer of storage hierarchy.
+    Since there are limited space to store in the memory, million of data are usually
+    store on disks/drives for minimize access. Thus, B-tree provides a significant
+    advantages in term of search, remove, sequential access, and attachments in sorted order.
+- What's the search complexity of B-Tree? And how does it affect search efficiency (time) comparing to hashtable?
+    B-tree search time complexity is O(logn). Compare to hashtable, BTree is still much
+    efficient even in the worst case scenario. This because Hash table might result in
+    collision if the amount of data is too big, which affect the search time. And in worse
+    case scenario, it might take O(n) to search for a value in the hash table.
+- Why does B-Tree provide advantage over hashtable for range query.
+    B-Tree provides advantage over hashtable for range query since it's a self balance data
+    structure, sorted in order, and can fit more key in one node. This gives B-tree a huge
+    advantage in finding or searching a specific range. Meanwhile, hashtable is more efficient
+    in equality comparison.
+
+ PERFORMANCE TEST
+    In a single query, we can see that the result in both b-tree and hash table are about the
+    same range and same executing time despite the increment in of table size. However, with
+    the range query, we can see some differences between the 2 data structure. In range
+    query, the executing time of the hashtable dramatically increases as the size of the table
+    increase. Even though this happen the same for b-tree data structure, the time executing
+    is nearly 1/2 less than the hash table. In conclusion, b-tree and hashtable in single query
+    performances are about the same, but b-tree is more efficient in performing range queries.
+***/
